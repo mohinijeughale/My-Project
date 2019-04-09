@@ -1,0 +1,40 @@
+<h1>{{title}}</h1>
+<table>
+    <tr *ngIf="showData">
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Adress</th>
+        <th>DOB</th>
+    </tr>
+
+    <tr>
+        <td>{{Name}}</td>
+        <td>{{Surname}}</td>
+        <td>{{Adress}}</td>
+        <td>{{DOB}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<button (click)="showDetails()"> {{showData ?'hide':'show'}}My button</button>
+<br>
+<br>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Adress</th>
+    </tr>
+
+    <tr *ngFor="let stud of student">
+        <td>{{stud.id}}</td>
+        <td>{{stud.name | student :stud.Gender }}</td>
+        <td>{{stud.lastName}}</td>
+        <td>{{stud.Gender}}</td>
+        <td>{{stud.adress}}</td>
+    </tr>
+</table>
+

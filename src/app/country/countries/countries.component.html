@@ -1,0 +1,17 @@
+<p>
+  countries works!
+</p>
+<table>
+  <tr>
+    <th>Country Name</th>
+    <th>Capital</th>
+    <th>Nativ name</th>
+    <!-- <th>Flag</th> -->
+  </tr>
+  <tr *ngFor="let c of country">
+    <td>{{c.name}}</td>
+    <td>{{c.capital}}</td>
+    <td>{{c.nativeName}}</td>
+    <!-- <td><img src="{{c.flag}}" height="50" width="50"></td> -->
+  </tr>
+</table>

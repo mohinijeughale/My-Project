@@ -1,0 +1,47 @@
+<h1>Welcome to angular</h1>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Course Name</th>
+        <th>Place</th>
+        <th>Course Fee</th>
+    </tr>
+    <tr>
+        <td> {{firstName}} </td>
+        <td> {{lastName}} </td>
+        <td> {{courseName}} </td>
+        <td> {{place}} </td>
+        <td> {{courseFee}} </td>
+    </tr>
+</table>
+<br>
+<table>
+<thead>
+    <tr>
+        <th colspan="5" >Employee Details:</th>
+    </tr>
+</thead>
+
+<tbody class="p" *ngIf="show">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+        <th>SALARY</th>
+        <th>DATE OF BIRTH</th>
+
+    </tr>
+    <tr *ngFor="let emp of employee">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name | empPipe : emp.gender}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.dob}}</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+  
+<button (click)="showDetails()">{{show ? 'Hide':'show'}}Details
+</button>

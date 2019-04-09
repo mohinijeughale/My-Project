@@ -1,0 +1,24 @@
+<p>employee-count Work!</p>
+
+<h2>All Employee:{{all}}</h2>
+<h2>All Male Employee :{{male}}</h2>
+<h2>All Female Employee:{{female}}</h2>
+
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+        <th>SALARY</th>
+        <th>DOB</th>
+    </tr>
+
+ <tr *ngFor="let cust of employee">
+     <td>{{cust.id}}</td>
+     <td>{{cust.name | empPipe: cust.gender}}</td>
+     <td>{{cust.gender}}</td>
+     <td>{{cust.salary}}</td>
+     <td>{{cust.dob}}</td>
+ </tr>
+</table>

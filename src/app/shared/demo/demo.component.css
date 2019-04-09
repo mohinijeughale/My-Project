@@ -1,0 +1,18 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif
+}
+.imageClass{
+    height:100px;
+    width: 100px;
+}
+.boldClass{
+    font-weight: bold;
+
+}
+.italicClass{
+    font-style: italic;
+
+}
+.colorClass{
+    color: red;
+}

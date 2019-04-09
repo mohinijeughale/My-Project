@@ -1,0 +1,37 @@
+<h1>keyboard component work !</h1>
+
+<h2>
+    Name : {{name}}
+    <br>
+
+    First Name:{{firstName}}
+</h2>
+
+<input [value] = "name" (input) = 'name =$event.target.value'>
+
+<br>
+<br>
+<input [(ngModel)] = 'name'>
+<input [(ngModel)] ='name1'>
+<input [value] ='firstName' (input) ='firstName=$event.target.value'>
+<br>
+<h1>
+    tv Component Work!
+    </h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>GENDER</th>
+            <th>SALARY</th>
+            <th>DOB</th>
+        </tr>
+    
+     <tr *ngFor="let cust of employee">
+         <td>{{cust.id}}</td>
+         <td>{{cust.name | empPipe: cust.gender}}</td>
+         <td>{{cust.gender}}</td>
+         <td>{{cust.salary}}</td>
+         <td>{{cust.dob}}</td>
+     </tr>
+    </table>

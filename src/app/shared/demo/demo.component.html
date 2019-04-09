@@ -1,0 +1,25 @@
+<h1>demo component work </h1>
+<h2>Name={{firstName}}</h2>
+<br>
+<br>
+<img  class="imageClass" src ="{{imagePath}}">
+<br>
+<br>
+<img class="imageClass"[src]= "imagepath"image>
+<br>
+<br>
+<button disabled ="{{isdisabled}}">My interpolltion button</button>
+<button [disabled]="isdisabled">my property binding button</button>
+<br>
+<img *ngIf="ShowData" src ="{{imagepath}}" class="imageClass">
+<img [src]="imagepath" class ="imageClass">
+<br>
+<button class="colorClass" [ngClass]="addClasses()">my button</button>
+
+<button style="color:red">my styled button</button>
+<button style='color:red' [style.font-weight]="isBold ? 'bold':Normal"></button>
+<br><br>
+<button class="colorClass" [ngStyle]="addStyles()"My NG Style button></button>
+<br><br>
+<button (click)="buttonIsclicked()">Click me</button>
+<button (click)="showDetails()">{{showData ? 'Hide' :'Show'}} Details</button>

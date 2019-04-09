@@ -1,0 +1,16 @@
+<h1>
+Tv Component Work!
+</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>GENDER</th>
+    </tr>
+
+ <tr *ngFor="let cust of customer">
+     <td>{{cust.id}}</td>
+     <td>{{cust.name | empPipe: cust.gender}}</td>
+     <td>{{cust.gender}}</td>
+ </tr>
+</table>

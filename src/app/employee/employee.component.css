@@ -1,0 +1,30 @@
+table{
+    
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace;
+    
+    color: black;
+    
+}
+table,td,th{
+    border-collapse: collapse;
+    border: 1px solid black
+}
+th {
+    font-size: 12px;
+
+}
+
+td{
+    font-size: 15px;
+    vertical-align: bottom;
+    text-align: left;
+    padding: 1%;   
+}
+.p{
+    font-size:1px;
+    color: mediumvioletred;
+}
+thead{
+    text-align: center;
+}

@@ -1,0 +1,134 @@
+<table  *ngIf="showData">
+        <th attr.colspan="{{colspan}}">Details</th>
+    <tr>
+        <th>Name</th>
+        <th>College</th>
+        <th>Gender</th>
+        <th>DOB</th>
+    </tr>
+    <tr>
+        <td>{{name}}</td>
+        <td>{{college}}</td>
+        <td>{{gender}}</td>
+        <td>{{DOB}}</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<button (click)="buttonIsclicked()">Save</button>
+<button (click)="showDetails()">{{ showData ? 'hide': 'show' }}Details</button>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Date of birth</th>
+    </tr>
+
+    <tr *ngFor= 'let emp of employee'>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name | uppercase}}</td>
+        <td>{{emp.gender | titlecase}}</td>
+        <td>{{emp.salary | currency }}</td>
+        <td>{{emp.dob | date :'fullDate'}}</td>
+    </tr>
+</table>
+<br>
+<br>
+<button (click)="getAllMaleEmployeeCount ()">All Employee count</button>
+
+<app-car-count [all] ="getAllEmployeeCount ()"
+               [male]="getAllMaleEmployeeCount ()"
+               [female] ="getAllFemaleEmployeeCount ()"></app-car-count>
+
+  <!-- <h1>All Employees are:{{getAllEmployeeCount()}}</h1> -->
+  <h1>You entered:{{name}}</h1>
+  <input [(ngModel)]="name"> 
+  <br>   
+  <button class="btn btn-primary" aria-checked="true"> Save</button>
+
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <br>
+        <br>
+        <br>
+      
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </button>
+          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="https://google.com">Dropdown link</a>
+            <a class="dropdown-item" href="https://yahoo.com">Dropdown link</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+          </div>
+          
+          <label for="basic-url">Your vanity URL</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          </div>
+          
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">With textarea</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+
+          <div>
+            <h2> custome Pipe</h2>
+
+            square of {{10}} is {{10 | square}}
+          </div>
+          <h1>
+            square of 5 is {{5 | square}}
+          </h1>
+
+          <h1>
+            squareroot of 25 is {{25| squareroot}}
+          </h1>
+          <h1>
+            cube of 3 is {{3 | cube}}
+          </h1>
+
+          <h1>
+            cuberoot of 27 is {{27 | CubeRoot}}
+          </h1>
+          
